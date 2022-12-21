@@ -7,11 +7,11 @@
     export let imagen
 
     function ver() {
-        dispatch("ver-mas");
+        dispatch('ver-mas',{id: 'Archivo Json'}); // En detail está el id
     }
 
     function favorito() {
-        dispatch("favorito");
+        dispatch('favorito', 'Saludos'); // En detail solo está 'Saludos'
     }
 </script>
 

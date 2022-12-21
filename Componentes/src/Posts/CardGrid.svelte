@@ -1,13 +1,17 @@
 <script>
     import Card from "./Card.svelte";
     export let post;
+    let evento = 'Sin eventos'; 
 
-    function verMas() {
+    function verMas(e) {
         alert("Has llamado a la función verMas");
+        evento = e.detail.id; // Guarda el id de detail
     }
 
-    function favorito() {
+    function favorito(event) {
         alert("Has llamado a la función favorito");
+        evento = event.detail; // guarda lo que hay en datail
+
     }
 
 </script>
@@ -24,3 +28,4 @@
         </div>
     {/each}
 </div>
+<h1>{evento}</h1>
