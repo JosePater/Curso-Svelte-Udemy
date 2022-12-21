@@ -63,11 +63,7 @@
 	<!-- preventDefault: evita que se refresque la página -->
 	<form on:submit|preventDefault={agregarPost}> 
 		<!-- Al dar clic llama  -->
-
-		<!-- <input type="text" placeholder="Título" bind:value={titulo} />
-		<input type="text" placeholder="Descripción" bind:value={descripcion} />
-		<input type="text" placeholder="Imagen" bind:value={imagen} /> -->
-
+		
 		<InputCustom
 			type='text'
 			nombre='Titulo'
