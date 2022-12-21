@@ -3,6 +3,7 @@
 	import Header from "./Design/Header.svelte";
 	import CardGrid from "./Posts/CardGrid.svelte";
 	import InputCustom from "./Design/InputCustom.svelte";
+	import Jumbotron from "./Design/Jumbotron.svelte";
 	const color = "warning";
 	
 	// Variables para el nuevo Post
@@ -55,6 +56,11 @@
 
 <div class="container">
 	<!-- Contenedor para llamar el componente Card -->
+
+	<!-- Se llama el componente de la manera tradicional (con su etiqueta de cierre) -->
+	<Jumbotron nombre="Mis componentes">
+		<h2>Subtítulo de Jumbotron</h2>
+	</Jumbotron>
 
 	<CardGrid {post} />
 	<!-- Llama el componente CardGrid -->
