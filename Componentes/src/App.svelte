@@ -58,8 +58,22 @@
 	<!-- Contenedor para llamar el componente Card -->
 
 	<!-- Se llama el componente de la manera tradicional (con su etiqueta de cierre) -->
-	<Jumbotron nombre="Mis componentes">
-		<h2>Subtítulo de Jumbotron</h2>
+	<Jumbotron nombre="Mis componentes" let:mostrar={mostrar}>
+		<span slot="subtitulo">
+			<!-- Reemplaza lo que está dentro del span en el jumbotron.svelte -->
+			Curso de Svelte 
+		</span>
+		<span slot="parrafo">
+			Contenido del párrafo
+		</span>
+		<hr>
+		<div class:mostrar>
+			{#if mostrar == true}
+			<button class="btn btn-danger">Botón</button>
+			{:else}
+			<h2>Coloca el mouse encima</h2>
+			{/if}
+		</div>
 	</Jumbotron>
 
 	<CardGrid {post} />
